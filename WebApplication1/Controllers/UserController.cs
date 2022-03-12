@@ -18,15 +18,15 @@ namespace WebApplication1.Controllers
 
 
         [HttpGet] // READ
-        public List<User> GetUsers()
+        public Task<List<User>> GetUsers()
         {
             return _userService.GetUsers();
         }
 
         [HttpPost] // CREATE
-        public IActionResult AddUser([FromBody] User user)
+        public async Task<IActionResult> AddUser([FromBody] User user)
         {
-            _userService.AddUser(user);
+            await _userService.AddUser(user);
             return Ok(); //Created();
         }
 

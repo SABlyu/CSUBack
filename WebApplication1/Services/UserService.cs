@@ -21,16 +21,17 @@ namespace WebApplication1.Services
             return _db.Users
                 .Where(u => u.Id == id)
                 .FirstOrDefaultAsync();
+            // awesome1password!
         }
 
-        public User AddUser(User user)
+        public async Task<User> AddUser(User user)
         {
-            _users.Add(user);
-            return user;
+            await _db.Users.AddAsync(user);
+            await _db.SaveChangesAsync();
+            return await _db.Users.FindAsync(user.Id);
         }
 
 
-        private static List<User> _users = new List<User>();
         private readonly DatabaseContext _db;
     }
 }
