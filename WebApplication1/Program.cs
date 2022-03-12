@@ -11,8 +11,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DatabaseContext>(
-    options => options.UseInMemoryDatabase(databaseName: "InMemDb"));
+//builder.Services.AddDbContext<DatabaseContext>(
+//    options => options.UseInMemoryDatabase(databaseName: "InMemDb"));
+
+// dotnet ef migrations add Initial --context=DatabaseContext --project=WebApplication1/WebApplication1.csproj
+// dotnet ef database update  --context=DatabaseContext --project=WebApplication1/WebApplication1.csproj
+
+var connectionString = builder.Configuration
+    .GetConnectionString("DbConnection");
+// https://docs.microsoft.com/ru-ru/ef/core/get-started/overview/install#get-the-net-core-cli-tools
+builder.Services.AddDbContext<DatabaseContext>(options => options
+    .UseSqlServer(connectionString)
+    .EnableDetailedErrors()
+    .EnableSensitiveDataLogging());
 
 builder.Services.AddScoped<UserService>();
 
