@@ -1,0 +1,11 @@
+builder.Services.AddDbContext<DatabaseContext>(options =>
+    options.UseInMemoryDatabase(databaseName: "InMemoryDb"));
+
+
+
+var connectionString = builder.Configuration
+    .GetConnectionString("DbConnectionString");
+builder.Services.AddDbContext<DatabaseContext>(options => options
+    .UseSqlServer(connectionString)
+    .EnableDetailedErrors()
+    .EnableSensitiveDataLogging());
