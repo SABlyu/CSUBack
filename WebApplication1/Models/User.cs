@@ -14,5 +14,8 @@ namespace WebApplication1.Models
 
         [MinLength(10), MaxLength(12)]
         public string PhoneNo { get; set; }
+
+
+        public List<Note> Notes { get; set; }
     }
 }

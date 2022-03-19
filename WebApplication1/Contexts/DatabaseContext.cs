@@ -11,5 +11,6 @@ namespace WebApplication1.Contexts
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Note> Notes { get; set; }
     }
 }
