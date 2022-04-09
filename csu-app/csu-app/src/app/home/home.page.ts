@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from '../models/user';
+import { UserService } from '../services/user.service';
 
 
 // VIEW-MODEL
@@ -9,6 +11,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
+
+  public users: User[];
+
+
+  loadUsers() {
+    this.userService.getUsers()
+      .subscribe(u => {
+        this.users = u;
+        console.info(u);
+      });
+  }
 }
