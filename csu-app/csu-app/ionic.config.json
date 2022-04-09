@@ -1,5 +1,5 @@
 {
-  "name": "csu-client",
+  "name": "csu-app",
   "integrations": {
     "capacitor": {}
   },
