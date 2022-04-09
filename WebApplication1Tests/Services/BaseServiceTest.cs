@@ -18,7 +18,7 @@ namespace WebApplication1Tests.Services
             Configuration = builder.Build();
 
             Options = new DbContextOptionsBuilder<DatabaseContext>()
-                .UseSqlServer(Configuration.GetConnectionString("DevDbConnection"))
+                .UseSqlServer(Configuration.GetConnectionString("DbConnection"))
                 .Options;
         }
 
@@ -40,14 +40,14 @@ namespace WebApplication1Tests.Services
 
 
         protected virtual void InitDbOptions(DbContextOptionsBuilder builder) =>
-            builder.UseSqlServer(Configuration.GetConnectionString("DevDbConnection"));
+            builder.UseSqlServer(Configuration.GetConnectionString("DbConnection"));
 
 
         protected virtual void RegisterServices(ServiceCollection services)
         {
             //DependencyInjector.RegisterServices(services);
             services.AddSingleton<IConfiguration>(Configuration);
-            //services.AddDbContext<MainContext>(options => InitDbOptions(options));
+            services.AddDbContext<DatabaseContext>(options => InitDbOptions(options));
         }
     }
 }

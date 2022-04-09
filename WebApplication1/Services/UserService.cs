@@ -28,6 +28,7 @@ namespace WebApplication1.Services
         {
             await _db.Users.AddAsync(user);
             await _db.SaveChangesAsync();
+
             return await _db.Users.FindAsync(user.Id);
         }
 

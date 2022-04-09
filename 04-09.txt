@@ -9,16 +9,20 @@ xUnit - enhanced version of NUnit
 2. Node.JS
 
 Node.JS - is a JavaScript runtime
-https://nodejs.org/en/download/
+- Installation: https://nodejs.org/en/download/
 
 
 3. Angular
 
 Angular - is a superset of JavaScript
-https://angular.io/guide/setup-local
+- Installation: https://angular.io/guide/setup-local
+- Why Angular?: https://medium.com/@maaouikimo/why-angular-is-your-best-choice-for-you-next-projects-9d754fb18f91
 
 
 4. Ionic
 
 Ionic - Framework + Toolkit to build cross-platform applications.
-https://ionicframework.com/docs/intro/cli
+- Installation: https://ionicframework.com/docs/intro/cli
+- VS Code extension: https://marketplace.visualstudio.com/items?itemName=ionic.ionic
+- Components to explore: https://ionicframework.com/docs/components
+
