@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WebApplication1.Models;
 
 namespace WebApplication1.Models
 {
-    public class User
+    public class User : DbItem
     {
-        public int Id { get; set; }
-        
         [Required]
         public string Name { get; set; }
         
@@ -17,5 +16,12 @@ namespace WebApplication1.Models
 
 
         public List<Note> Notes { get; set; }
+
+
+
+        public override void ClearNavigationProperties()
+        {
+            Notes = null;
+        }
     }
 }

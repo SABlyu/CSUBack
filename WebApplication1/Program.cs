@@ -26,6 +26,7 @@ builder.Services.AddDbContext<DatabaseContext>(options => options
     .EnableSensitiveDataLogging());
 
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<NoteService>();
 
 var app = builder.Build();
 
