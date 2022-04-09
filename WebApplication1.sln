@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9332C6C1-476F-4E59-A182-3FD60BFB8206}"
 	ProjectSection(SolutionItems) = preProject
 		EFCore.txt = EFCore.txt
+		04-09.txt = 04-09.txt
 	EndProjectSection
 EndProject
 Global

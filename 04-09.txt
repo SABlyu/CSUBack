@@ -1,0 +1,24 @@
+﻿
+1. Unit tests
+
+MS Tests - created by MS
+NUnit - opensource (?), quite old one
+xUnit - enhanced version of NUnit
+
+
+2. Node.JS
+
+Node.JS - is a JavaScript runtime
+https://nodejs.org/en/download/
+
+
+3. Angular
+
+Angular - is a superset of JavaScript
+https://angular.io/guide/setup-local
+
+
+4. Ionic
+
+Ionic - Framework + Toolkit to build cross-platform applications.
+https://ionicframework.com/docs/intro/cli
