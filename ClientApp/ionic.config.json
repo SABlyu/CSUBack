@@ -1,0 +1,7 @@
+{
+  "name": "csu-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
